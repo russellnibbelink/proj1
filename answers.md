@@ -9,8 +9,10 @@ button_to sends a request to capture_path which is evaluated to /capture, it sen
 the data specified inside capture_path, in this case id: @pokemon.
 
 # Question 3: What would you name your own Pokemon?
+RAILSDECALMON
 
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
+I passed in the trainer for the pokemon. It is ok because the show method gets called when we pass in the single trainer.
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
 
