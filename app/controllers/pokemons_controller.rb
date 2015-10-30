@@ -23,6 +23,17 @@ class PokemonsController < ApplicationController
   end
 
   def create
+    values = params[:pokemon]
+    @pokemon = Pokemon.new
+    @pokemon.name = values[:name]
+    @pokemon.level = 1
+    @pokemon.health = 100
+    @pokemon.trainer_id = current_trainer.id
+    if @pokemon.save
+      redirect_to Trainer.find(current_trainer.id)
+    else
+      flash[:error] = @pokemon.errors.full_messages.to_sentence
+      redirect_to :action => "new"
+    end
   end
-    
 end

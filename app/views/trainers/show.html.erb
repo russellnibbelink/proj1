@@ -13,6 +13,8 @@
     </tr>
     <% end %>
   </tbody>
-</table> 
-<p>Create a new Pokemon:</p>
-<%= link_to "New Pokemon", "/pokemons/new", :class => "button medium" %>
+</table>
+<% if @show_button%>
+    <p>Create a new Pokemon:</p>
+    <%= link_to "New Pokemon", "/pokemons/new", :class => "button medium" %>
+<% end%>
