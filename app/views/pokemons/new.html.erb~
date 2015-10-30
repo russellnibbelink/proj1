@@ -1,0 +1,6 @@
+<h3>Create New Pokemon</h3>
+<%= simple_form_for @pokemon do |f| %>
+<%= f.input :name %>
+<%= f.input :level %>
+<%= f.button :submit %>
+<% end %>

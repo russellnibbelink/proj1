@@ -12,9 +12,17 @@ class PokemonsController < ApplicationController
     @pokemon.health -= 10
     if @pokemon.health <= 0
       @pokemon.destroy
-    else  
+    else
       @pokemon.save
     end
     redirect_to @trainer
   end
+
+  def new
+    @pokemon = Pokemon.new
+  end
+
+  def create
+  end
+    
 end
